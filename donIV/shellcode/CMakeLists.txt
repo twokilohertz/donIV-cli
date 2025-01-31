@@ -1,12 +1,12 @@
 set(
     SHELLCODE_INCLUDE_DIR
-    "${CMAKE_CURRENT_BINARY_DIR}/shellcode/"
+    ${CMAKE_CURRENT_BINARY_DIR}
     PARENT_SCOPE
 )
 
 set(
     SHELLCODE_OUT_DIR
-    ${CMAKE_CURRENT_BINARY_DIR}/shellcode
+    ${CMAKE_CURRENT_BINARY_DIR}
 )
 
 add_custom_command(

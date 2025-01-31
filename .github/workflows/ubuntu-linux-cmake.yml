@@ -1,0 +1,30 @@
+name: Ubuntu Linux CMake
+
+on: [push, pull_request]
+
+env:
+  BUILD_TYPE: Release
+  CFLAGS: -static -static-libgcc -static-libstdc++
+  CXXFLAGS: -static -static-libgcc -static-libstdc++
+  CC: /usr/bin/gcc-14
+  CXX: /usr/bin/g++-14
+  AS: /usr/bin/as
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure CMake
+        run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}} -DCMAKE_C_COMPILER=${{env.CC}} -DCMAKE_CXX_COMPILER=${{env.CXX}} -DBUILD_SHARED_LIBS=OFF
+
+      - name: Build
+        run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: doniv-cli-artifact
+          path: ${{github.workspace}}/build/doniv-cli
