@@ -1,0 +1,2 @@
+Checks: '-*,cppcoreguidelines-*,performance-*,bugprone-*,clang-diagnostic-*,clang-analyzer-*'
+WarningsAsErrors: ''

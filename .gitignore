@@ -1,0 +1,29 @@
+# Visual Studio Code
+.vscode/
+
+# IntelliJ IDEs
+.idea/
+
+# CMake
+build/
+target/
+out/
+
+# clangd
+.cache/
+
+# Build artefacts
+*.exe
+*.dll
+*.lib
+*.pdb
+*.dylib
+*.so
+*.o
+*.a
+
+# Binaries
+# *.bin
+
+# Miscellaneous stuff
+.directory
