@@ -9,7 +9,7 @@
 
 .section .text
     _start:
-        movq        %rdi, %r11      # Temporarily remove dlopen_fn_ptr
+        movq        %rdi, %r11      # Move dlopen_fn_ptr to a temp. register
 
         # Set up dlopen() call
         movq        %rsi, %rdi      # Move path string ready for dlopen()
