@@ -1,7 +1,8 @@
 # bin2cppheader.py
 # Convert a binary file to its static std::array representation as an
 # includable header file in your C++ project.
-# Author: Adam Macdonald [https://github.com/twokilohertz]
+# Author:   Adam Macdonald [https://github.com/twokilohertz]
+# License:  MIT License
 
 usage = "Usage: python bin2cppheader.py in_file [out_file]"
 
